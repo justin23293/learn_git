@@ -1,0 +1,57 @@
+Configure git in local device:
+Local device: 
+ssh-keygen -t rsa -b 4096 -C "host1946@gmail.com"
+Add the contents of file  git_justin.pub to Github -> Settings -> SSH and GPG keys -> New SSH key or Add SSH key.
+
+eval "$(ssh-agent -s)"  ssh-add git_justin
+ssh -T git@github.com  > test connection.
+
+
+git init
+git config --global user.email "host1946@gmail.com"
+git config --global user.name " Justin Mathew"
+git config --global credential.helper store
+git config --global credential.https://github.com.username justin23293
+git config --global credential.https://github.com.token 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
+git commit -m "note"
+
+git remote add origin git@github.com:justin23293/justinmathew.in.git
+git remote set-url origin git@github.com:justin23293/justinmathew.in.git
+git remote -v      >> verify the repo
+git add .       >> from the folder with contents - add files to staging area
+git commit -m    >> Commit the changes
+git push -u origin master  > push changes to remote repo.
+
+========================================
+GIT: 
+
+git init
+git remote add origin https://justinmathew23293@bitbucket.org/bone_digital/restrict-content-pro-campaign-monitor-addon.git
+git remote add origin https://justinmathew23293@bitbucket.org/bone_digital/gravity-forms-campaign-monitor-addon.git
+git remote remove origin
+git remote add origin git@bitbucket.org:bone_digital/restrict-content-pro-campaign-monitor-addon.git
+git remote -v
+
+git add .
+git commit -m "[chore] Initial Commit"
+git push origin master
+
+git config --list
+git config --global http.proxy http://justin.m:5sOSW..q89v8M@proxy.inhouse.net:3333/
+git config --global http.proxyAuthMethod 'basic'
+git config --global user.email "devops@bone.digital"
+git config --global user.name "Justin Mathew"
+git config --global http.sslVerify false
+
+environment variable: 
+eval `ssh-agent` 
+ssh-add ~/.ssh/
+Show environment variable: ssh-add -l
+Remove environment valriable: ssh-add -D
+
+force push: git push -f origin master
+
+{
+	"name": "restrict-content-pro/restrict-content-pro-campaign-monitor-addon",
+	"type": "wordpress-plugin"
+}
