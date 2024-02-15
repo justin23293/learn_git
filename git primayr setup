@@ -1,0 +1,22 @@
+Configure git in local device:
+Local device: 
+ssh-keygen -t rsa -b 4096 -C "host1946@gmail.com"
+Add the contents of file  git_justin.pub to Github -> Settings -> SSH and GPG keys -> New SSH key or Add SSH key.
+
+eval "$(ssh-agent -s)"  ssh-add git_justin
+ssh -T git@github.com  > test connection.
+
+
+git init
+git config --global user.email "host1946@gmail.com"
+git config --global user.name " Justin Mathew"
+git config --global credential.helper store
+git config --global credential.https://github.com.username justin23293
+git config --global credential.https://github.com.token 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
+git commit -m "note"
+
+git remote set-url origin git@github.com:justin23293/laravel-api-base-image.git
+git remote -v      >> verify the repo
+git add .       >> from the folder with contents - add files to staging area
+git commit -m    >> Commit the changes
+git push -u origin master  > push changes to remote repo.
